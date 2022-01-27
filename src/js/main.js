@@ -798,13 +798,13 @@
 	// End: Tabs menu profile actor add class active
 
 	// Маска для input-date
-	$(function () {
-		$('.input-time').mask('99:99');
-	});
+	// $(function () {
+	// 	$('.input-time').mask('99:99');
+	// });
 
-	$(function () {
-		$('.input-phone').mask('+7 (999) 999-99-99');
-	});
+	// $(function () {
+	// 	$('.input-phone').mask('+7 (999) 999-99-99');
+	// });
 
 	// Trigger focus input
 	$(function () {
@@ -830,4 +830,37 @@
 	});
 
 	// End: Trigger focus textarea and custom scroll
+
+	// Start: Plans-switch
+	$(function () {
+		$('.plans-switch__wrapper').each(function () {
+			const switchSlider = $(this).find('.plans-switch__slider');
+			const step = 100 / 3;
+
+			$(this).click(function (e) {
+				const targetIndex = $(e.target.closest('.plans-switch__item')).data('index');
+				const targetBtn = $(e.target.closest('.plans-switch__item'));
+				targetBtn.addClass('active');
+				targetBtn.siblings().removeClass('active');
+				switchSlider.css('left', `${step * targetIndex}%`);
+			});
+		});
+
+		$('.plans-tab-1').click(moveToFirst);
+		$('.plans-tab-2').click(moveToSecond);
+		$('.plans-tab-3').click(moveToThird);
+
+		function moveToFirst() {
+			$('.plans-switch__cards-slide').attr('class', 'move-to-first plans-switch__cards-slide');
+		}
+
+		function moveToSecond() {
+			$('.plans-switch__cards-slide').attr('class', 'move-to-second plans-switch__cards-slide');
+		}
+
+		function moveToThird() {
+			$('.plans-switch__cards-slide').attr('class', 'move-to-third plans-switch__cards-slide');
+		}
+	});
+	// End: Plans-switch
 })(jQuery);

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Plans popup</title>
+		<link rel="stylesheet" href="css/nav.min.css" />
+	</head>
+	<body>
+		<div class="plans-popup-overlay">
+			<div class="plans-popup__container">
+				<div class="plans-popup">
+					<!-- Start: mobile popup -->
+					<button class="black-circle-close-btn mobile-popup-close-btn">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#616161" stroke-width="1.8" stroke-miterlimit="10" />
+							<path d="M15 9L9 15" stroke="#616161" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M15 15L9 9" stroke="#616161" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</button>
+					<div class="plans-popup__header">
+						<div class="plans-popup__header-text">
+							<div class="plans-popup__header-title">Выберите тарифный план</div>
+							<div class="plans-popup__header-subtitle">Это необходимо для продолжения использования сервиса</div>
+						</div>
+						<div class="plans-popup__header-btn">
+							<div class="plans-switch --popup">
+								<div class="switch__wrapper">
+									<div class="switch">
+										<span class="switch__slider"></span>
+										<button class="switch__item plans-switch-item-active plans-switch-item-left" data-index="0">3 месяца</button>
+										<button class="switch__item plans-switch-item-right" data-index="1">1 год <span class="plans-switch-profit">(15% выгода)</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="plans-switch__container --mobile-popup">
+						<div class="plans-switch__wrapper">
+							<div class="plans-switch-mobile">
+								<span class="plans-switch__slider"></span>
+								<button class="plans-switch__item active plans-tab-1" data-index="0">Lite</button>
+								<button class="plans-switch__item --pro plans-tab-2" data-index="1">Pro</button>
+								<button class="plans-switch__item plans-tab-3" data-index="2">Pro 65+</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="plans-switch__cards --mobile-popup">
+						<div class="plans-switch__cards-inner">
+							<div class="plans-switch__cards-slide">
+								<div class="plans-switch__cards-item --mobile-popup plans-first">
+									<div class="plans__item-price-inner">
+										<span class="plans__item-price">₽ 990</span>
+										<span class="plans__item-price-text">/ Единоразово</span>
+									</div>
+									<div class="plans__item-text --mobile">Если подключен тариф PRO или VIP, оплата не требуется</div>
+									<div class="plans__item-opportunities">
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Доступ к кастингам</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Поисковая выдача: одна страна</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Поиск агента</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Фото 5 шт, видео 1 шт, аудио 1шт</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Видеопробы 1 шт</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Встроенный мессенджер</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Ссылка на профиль</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Мультиязычный профиль</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Продвижение и поддержка 24/365</span>
+										</div>
+									</div>
+									<button class="secondary-btn --blue plans__item-mobile-btn">Выбрать тариф</button>
+								</div>
+								<div class="plans-switch__cards-item --mobile-popup --pro plans-second">
+									<div class="plans-switch --mobile">
+										<div class="switch__wrapper">
+											<div class="switch">
+												<span class="switch__slider"></span>
+												<button class="switch__item plans-switch-item-active plans-switch-item-left" data-index="0">3 месяца</button>
+												<button class="switch__item plans-switch-item-right" data-index="1">1 год <span class="plans-switch-profit">(15% выгода)</span></button>
+											</div>
+										</div>
+									</div>
+									<div class="plans__item-price-inner">
+										<span class="plans__item-price js-plans-pro-first">₽ 299</span>
+										<span class="plans__item-price js-plans-pro-second d-none">₽ 254</span>
+										<span class="plans__item-price-text">/ Месяц</span>
+									</div>
+									<div class="plans__item-text --mobile">
+										Все возможности сервиса, <br />
+										для максимального удобства актёра
+									</div>
+									<div class="plans__item-opportunities">
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Доступ к кастингам</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Поисковая выдача: все страны</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Поиск агента</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Фото 30 шт, видео 5 шт, аудио 5шт</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Видеопробы 50 шт</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Встроенный мессенджер</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Ссылка на профиль</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Мультиязычный профиль</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Продвижение и поддержка 24/365</span>
+										</div>
+									</div>
+									<button class="secondary-btn --blue plans__item-mobile-btn">Выбрать тариф</button>
+								</div>
+								<div class="plans-switch__cards-item --mobile-popup plans-third">
+									<div class="plans__item-price-inner">
+										<span class="plans__item-price">₽ 0</span>
+										<span class="plans__item-price-text">/ Месяц </span>
+									</div>
+									<div class="plans__item-text --mobile">
+										Если вам больше 65 лет, тогда для вас <br />
+										всё это будет бесплатно
+									</div>
+									<div class="plans__item-opportunities">
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Доступ к кастингам</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Поисковая выдача: все страны</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Поиск агента</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Фото 30 шт, видео 5 шт, аудио 5шт</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Видеопробы 50 шт</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Встроенный мессенджер</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Ссылка на профиль</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Мультиязычный профиль</span>
+										</div>
+										<div class="plans__item-opportunities-box --mobile">
+											<span class="plans__item-opportunities-box-text --mobile">Продвижение и поддержка 24/365</span>
+										</div>
+									</div>
+									<button class="secondary-btn --blue plans__item-mobile-btn">Выбрать тариф</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End: mobile popup -->
+
+					<div class="plans__inner --popup">
+						<div class="plans__wrapper --popup">
+							<div class="plans__item --popup --lite">
+								<div class="plans__item-title">Lite</div>
+								<div class="plans__item-price-inner">
+									<span class="plans__item-price">₽ 990</span>
+									<span class="plans__item-price-text">/ Единоразово</span>
+								</div>
+								<div class="plans__item-text">Если подключен тариф PRO или VIP, оплата не требуется</div>
+								<div class="plans__item-opportunities">
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Доступ к кастингам</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Поисковая выдача: одна страна</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Поиск агента</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Фото 5 шт, видео 1 шт, аудио 1шт</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Видеопробы 1 шт</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Встроенный мессенджер</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Ссылка на профиль</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Мультиязычный профиль</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Продвижение и поддержка 24/365</span>
+									</div>
+								</div>
+								<button class="secondary-btn --transparent">Выбрать тариф</button>
+							</div>
+							<div class="plans__item --main --pro">
+								<div class="plans__item-title">PRO</div>
+								<div class="plans__item-price-inner">
+									<span class="plans__item-price js-plans-pro-first">₽ 299</span>
+									<span class="plans__item-price js-plans-pro-second d-none">₽ 254</span>
+									<span class="plans__item-price-text">/ Месяц</span>
+								</div>
+								<div class="plans__item-text">
+									Все возможности сервиса, <br />
+									для максимального удобства актёра
+								</div>
+								<div class="plans__item-opportunities">
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Доступ к кастингам</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Поисковая выдача: все страны</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Поиск агента</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Фото 30 шт, видео 5 шт, аудио 5шт</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Видеопробы 50 шт</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Встроенный мессенджер</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Ссылка на профиль</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Мультиязычный профиль</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Продвижение и поддержка 24/365</span>
+									</div>
+								</div>
+								<button class="secondary-btn --blue">Выбрать тариф</button>
+							</div>
+							<div class="plans__item --popup --pro-65">
+								<div class="plans__item-title">PRO 65+</div>
+								<div class="plans__item-price-inner">
+									<span class="plans__item-price">₽ 0</span>
+									<span class="plans__item-price-text">/ Месяц </span>
+								</div>
+								<div class="plans__item-text">
+									Если вам больше 65 лет, тогда для вас <br />
+									всё это будет бесплатно
+								</div>
+								<div class="plans__item-opportunities">
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Доступ к кастингам</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Поисковая выдача: все страны</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Поиск агента</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Фото 30 шт, видео 5 шт, аудио 5шт</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Видеопробы 50 шт</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Встроенный мессенджер</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Ссылка на профиль</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Мультиязычный профиль</span>
+									</div>
+									<div class="plans__item-opportunities-box">
+										<span class="plans__item-opportunities-box-text">Продвижение и поддержка 24/365</span>
+									</div>
+								</div>
+								<button class="secondary-btn --transparent">Выбрать тариф</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
