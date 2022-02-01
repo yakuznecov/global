@@ -8,6 +8,7 @@
 @import 'select';
 @import 'inputs-form';
 @import 'margin';
+@import 'checkbox';
 
 html,
 body {
@@ -24,6 +25,21 @@ body {
 
 .container {
 	padding: 40px;
+}
+
+.header__menu {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1280px;
+	margin: 16px auto 32px;
+}
+
+.header__menu-link {
+	font-size: 14px;
+	color: #738593;
+	&:hover {
+		color: #525f68;
+	}
 }
 
 // Start: Кнопки с переключением

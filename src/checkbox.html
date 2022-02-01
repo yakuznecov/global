@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Checkbox</title>
+		<link rel="stylesheet" href="css/nav.min.css" />
+	</head>
+	<body>
+		<div class="container">
+			@@include('header__menu.html')
+
+			<div class="checkbox-button mb-8">
+				<input type="radio" class="checkbox-main" id="spoiler-gender-male" name="radio-gender" />
+				<label for="spoiler-gender-male" class="label-main">Мужской</label>
+			</div>
+			<div class="checkbox-button mb-8">
+				<input type="radio" class="checkbox-main" id="spoiler-gender-female" name="radio-gender" />
+				<label for="spoiler-gender-female" class="label-main">Женский</label>
+			</div>
+			<div class="checkbox-select mb-8">
+				<input type="checkbox" class="checkbox-select-main" id="checkbox-select-breast" name="radio-gender" />
+				<label for="checkbox-select-breast" class="checkbox-select-label-main">Грудь</label>
+			</div>
+			<div class="checkbox-select mb-8">
+				<input type="checkbox" class="checkbox-select-main" id="checkbox-select-back" name="radio-gender" />
+				<label for="checkbox-select-back" class="checkbox-select-label-main">Со спины</label>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<!-- <script src="js/inputs-form.js"></script> -->
+	</body>
+</html>
