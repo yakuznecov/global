@@ -2,6 +2,7 @@
 	user-select: none; /* запрет выделения текста */
 	white-space: nowrap; /* запрет переноса слов в строке */
 	text-overflow: ellipsis; /* прячет за точками */
+	-webkit-tap-highlight-color: transparent; /* удалить цвет при нажатии */
 }
 
 .text-za-tochkami {
