@@ -1,6 +1,14 @@
 .info {
 	user-select: none; /* запрет выделения текста */
 	white-space: nowrap; /* запрет переноса слов в строке */
+	text-overflow: ellipsis; /* прячет за точками */
+}
+
+.text-za-tochkami {
+	max-width: 100px;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 /* Если нужна задержка анимации ------------------------------------------------------------------*/
