@@ -47,3 +47,22 @@ transferActorsCloseBtn.addEventListener('click', function () {
 // Установить плейсхолдер -------------------------------------------------------------------------------------------------->
 inputTopSearch.placeholder = 'Актёры';
 // ------------------------------------------------------------------------------------------------------------------------->
+
+// Установить 3 точки в конце обрезанного текста --------------------------------------------------------------------------->
+const cutTextString = () => {
+    let cutText = document.querySelector('.js-cutText');
+    let text = cutText.innerHTML;
+
+    function truncateString(str, n) {
+        if (str.length > n) {
+            return str.substring(0, n) + ' ...';
+        } else {
+            return str;
+        }
+    }
+
+    cutText.innerHTML = truncateString(text, 14);
+};
+
+cutTextString();
+// ------------------------------------------------------------------------------------------------------------------------->

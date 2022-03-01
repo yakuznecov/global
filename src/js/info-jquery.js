@@ -63,3 +63,11 @@ checkboxPro65.on('click', function () {
     }
 });
 // End: выполнение кода при повторном нажатии кнопки
+
+// Start: Проверка наличия элемента на странице
+if (mainHeaderBottomLeft.length > 0) {
+}
+
+if ($('.input-time').length > 0) {
+}
+// End: Проверка наличия элемента на странице
