@@ -1,38 +1,51 @@
 .info {
-	user-select: none; /* запрет выделения текста */
-	white-space: nowrap; /* запрет переноса слов в строке */
-	text-overflow: ellipsis; /* прячет за точками */
-	-webkit-tap-highlight-color: transparent; /* удалить цвет при нажатии */
+    user-select: none; /* запрет выделения текста */
+    white-space: nowrap; /* запрет переноса слов в строке */
+    text-overflow: ellipsis; /* прячет за точками */
+    -webkit-tap-highlight-color: transparent; /* удалить цвет при нажатии */
 }
 
 .text-za-tochkami {
-	max-width: 100px;
-	overflow: hidden;
+    max-width: 100px;
+    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
+/* Если нужен hover только на десктопе, на мобильных отключается ------------------------------------*/
+@media (hover: hover) {
+    a:hover {
+        background: yellow;
+    }
+}
+/* ------------------------------------------------------------------------------------------------ */
+
 /* Если нужна задержка анимации ------------------------------------------------------------------*/
 .menu .submenu {
-	opacity: 0; /* По умолчанию скрываем подменю */
-	visibility: hidden;
-	transition-property: opacity, visibility; /* Задаем какие свойства анимировать */
-	transition-duration: 0.3s, 0.3s; /* Задаем продолжительность анимации для каждого свойства */
-	transition-delay: 0.15s, 0.15s; /* Задаем задержку анимации для каждого свойства */
+    opacity: 0; /* По умолчанию скрываем подменю */
+    visibility: hidden;
+    transition-property: opacity, visibility; /* Задаем какие свойства анимировать */
+    transition-duration: 0.3s, 0.3s; /* Задаем продолжительность анимации для каждого свойства */
+    transition-delay: 0.15s, 0.15s; /* Задаем задержку анимации для каждого свойства */
 }
 
 .menu .menu-item:hover .submenu {
-	opacity: 1; /* Показываем подменю при ховере */
-	visibility: visible;
+    opacity: 1; /* Показываем подменю при ховере */
+    visibility: visible;
 }
 /* ------------------------------------------------------------------------------------------------ */
 
 /* Инициализация Slick slider после загрузки страницы, чтобы не видно было другие слайды при перезагрузке ------------ */
 .casting__training-slider {
-	display: none;
+    display: none;
 }
 
 .casting__training-slider.slick-initialized {
-	display: block;
+    display: block;
 }
 /* ------------------------------------------------------------------------------------------------------------------- */
+
+/* Выбирает предпоследний вариант------------------------------------------------------------------*/
+:nth-last-child(-n + 2) {
+}
+/* -----------------------------------------------------------------------------------------------*/
