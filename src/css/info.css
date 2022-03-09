@@ -3,6 +3,13 @@
     white-space: nowrap; /* запрет переноса слов в строке */
     text-overflow: ellipsis; /* прячет за точками */
     -webkit-tap-highlight-color: transparent; /* удалить цвет при нажатии */
+
+    transition: opacity 0.2s, flex 0.2s, width 0.2s; /* Несколько свойств */
+    
+}
+
+.no-transition {
+    transition: none !important; /* Отключить*/
 }
 
 .text-za-tochkami {
