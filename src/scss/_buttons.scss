@@ -24,6 +24,45 @@
 }
 // End: Кнопка с синей заливкой
 
+.blue-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 24px;
+	height: 24px;
+	font-size: 13px;
+	letter-spacing: 0.4px;
+	border-radius: 4px;
+	color: #fff;
+	background: #1991eb;
+	transition: 0.2s ease;
+	&.--inactive {
+		background: #c6e4fa;
+		&:hover,
+		&:active {
+			background: #c6e4fa;
+		}
+	}
+	&.--medium {
+		height: 32px;
+		font-size: 15px;
+		letter-spacing: 0.5px;
+	}
+	&.--large {
+		height: 40px;
+		font-size: 16px;
+		letter-spacing: 0.5px;
+	}
+	&:hover,
+	&:active {
+		background: #127fd1;
+	}
+	&:focus-visible {
+		background: #1991eb;
+		border: 2px solid #7bb9f0;
+	}
+}
+
 // Start: прозрачная кнопка без заливки
 .secondary-btn {
 	display: inline-flex;
