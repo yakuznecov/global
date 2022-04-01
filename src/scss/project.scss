@@ -1,0 +1,83 @@
+.dropdown-mainRole .dropdown-ensemble-inner {
+	width: 440px;
+	min-height: 429px;
+	border-radius: 8px;
+	box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.16);
+	left: 14px;
+	top: 42px;
+	padding: 19px 24px 32px 22px;
+
+	opacity: 0;
+	visibility: hidden;
+	opacity: 1 !important;
+	visibility: visible !important;
+	transition: all 0.2s;
+}
+
+// arrow down
+& .teamwork__dropdown-input-modal-arrow path {
+	fill: #9e9e9e;
+}
+
+& span svg {
+	transition: transform 0.2s;
+}
+
+& span svg {
+	transform: rotate(180deg);
+}
+
+& span svg path {
+	fill: #127fd1;
+}
+
+
+@media (hover: hover) {
+	&:hover {
+		border-radius: 4px;
+		background-color: #E0E0E0;
+	}
+}
+
+&:active {
+	border-radius: 4px;
+	background-color: #E0E0E0;
+}
+
+// scroll
+.dropdown-ensemble__container {
+	max-height: 270px;
+	padding: 0 12px 0 16px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	scrollbar-color: #e0e0e0 transparent;
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		width: 4px;
+		height: 71px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: transparent;
+		margin-bottom: 8px;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: #e0e0e0;
+		border-radius: 100px;
+		background-clip: padding-box;
+	}
+}
+
+// увеличение области
+&:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: -5px;
+} 

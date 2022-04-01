@@ -216,3 +216,22 @@
 		background: #127fd1;
 	}
 }
+
+.action-light-blue-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+	padding: 0 16px;
+	border-radius: 4px;
+	color: #1991eb;
+	background: #dbedff;
+	transition: 0.2s ease;
+
+	&:hover {
+		background: #a0cfff;
+		color: #127fd1;
+	}
+}

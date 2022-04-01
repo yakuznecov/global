@@ -2,6 +2,10 @@
 'touchend'; // убираем палец с экрана, ака «mouseup»
 'touchmove'; // водим пальцем по экрану — «mousemove»
 
+$(this).outerHeight(); // высота элемента, получает текущее вычисленное значение внешней высоты (включая внутренние отступы - padding, границы - border и при необходимости внешние отступы - margin) для первого элемента в наборе совпавших элементов, или устанавливает внешнюю высоту каждого соответствующего элемента.
+
+$(this).offset().top; // задает или возвращает значение координат для выбранных элементов (относительно документа).
+
 // Start: siblings() ------------------------------------------------------------------------------------------------------------------ >
 $(selector).siblings(); // выбор всех смежных элементов
 $(selector).siblings(selector); // выбор смежного элемента с определенным селектором
@@ -78,6 +82,16 @@ if ($('.input-time').length > 0) {
 }
 // End: Проверка наличия элемента на странице
 
+// закрыть при клике вне дропдауна или модального окна
+const hideModalClickOutside = (parent, modalWrapper) => {
+	$(document).on('click', function (e) {
+		let field = $(parent);
+		if (!field.is(e.target) && field.has(e.target).length === 0) {
+			$(modalWrapper).removeClass('active');
+		}
+	});
+}
+
 
 // Открыть дропдаун на мобильных и закрыть при клике на кнопку и при клике вне дропдауна
 $(function () {
@@ -150,3 +164,45 @@ $(document.body).on('navLoaded', function () {
     // код внутри
 });
 // ---------------------------------------------------------------------------------------------------------------------------------->
+
+// Start actions Modal on hover dynamic position
+const actionsModal = () => {
+	const actionBtn = $('.action-btn');
+	const actionsModal = $('.dropdown-actions__modal');
+
+	actionBtn.mouseenter(function (e) {
+		e.stopPropagation();
+		$(this).addClass('active');
+
+		if (actionsModal.hasClass('d-none')) {
+			actionsModal.removeClass('d-none');
+			setTimeout(function () {
+				actionsModal.removeClass('opacity-null');
+			}, 20);
+		}
+
+		let top = $(this).offset().top + $(this).outerHeight();
+		let left = $(this).offset().left;
+		let win_h = $(window).height();
+		let div_h = 96;
+		if (win_h - top < div_h) {
+			$(actionsModal).css({ top: top - 122, left: left });
+		} else {
+			$(actionsModal).css({ top: top + 2, left: left });
+		}
+	});
+
+	$(document).mouseover(function (e) {
+		e.stopPropagation();
+		if (!actionsModal.is(e.target) && !actionBtn.is(e.target) && actionsModal.has(e.target).length === 0 && actionBtn.has(e.target).length === 0) {
+			actionBtn.removeClass('active');
+			actionsModal.addClass('opacity-null');
+			actionsModal.addClass('d-none');
+			$(actionsModal).css('top', 'auto');
+			$(actionsModal).css('left', 'auto');
+		}
+	});
+};
+
+actionsModal();
+// End actions Modal on hover dynamic position
