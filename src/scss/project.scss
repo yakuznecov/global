@@ -43,33 +43,6 @@
 	background-color: #E0E0E0;
 }
 
-// scroll
-.dropdown-ensemble__container {
-	max-height: 270px;
-	padding: 0 12px 0 16px;
-	overflow-y: auto;
-	overflow-x: hidden;
-	scrollbar-color: #e0e0e0 transparent;
-	scrollbar-width: thin;
-
-	&::-webkit-scrollbar {
-		width: 4px;
-		height: 71px;
-	}
-
-	/* Track */
-	&::-webkit-scrollbar-track {
-		background: transparent;
-		margin-bottom: 8px;
-	}
-
-	/* Handle */
-	&::-webkit-scrollbar-thumb {
-		background: #e0e0e0;
-		border-radius: 100px;
-		background-clip: padding-box;
-	}
-}
 
 // увеличение области
 &:before {
@@ -79,7 +52,7 @@
 	right: 0;
 	left: 0;
 	bottom: -5px;
-} 
+}
 
 .card {
 	border: 2px solid #9BC3E8;
