@@ -1,6 +1,0 @@
-/* Отмена hover на мобильных */
-@media (min-width: 896px) {
-	.secondary-btn.--blue:hover {
-		background: #1d93f3;
-	}
-}

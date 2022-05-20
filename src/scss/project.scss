@@ -58,3 +58,16 @@
 	border: 2px solid #9BC3E8;
 	background: #F9FCFE;
 }
+
+// размытый фон для мобильных, на котором есть меню
+.blur-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	padding: 24px 12px;
+	backdrop-filter: blur(10px);
+	background: rgba(182, 182, 182, 0.5);
+}
