@@ -1,41 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Checkbox</title>
-        <link rel="stylesheet" href="css/nav.min.css" />
-    </head>
-    <body>
-        <div class="container">
-            @@include('header__menu.html')
 
-            <div class="checkbox-button mb-8">
-                <input type="radio" class="checkbox-main" id="spoiler-gender-male" name="radio-gender" />
-                <label for="spoiler-gender-male" class="label-main">Мужской</label>
-            </div>
-            <div class="checkbox-button mb-8">
-                <input type="radio" class="checkbox-main" id="spoiler-gender-female" name="radio-gender" />
-                <label for="spoiler-gender-female" class="label-main">Женский</label>
-            </div>
-            <div class="checkbox-select mb-8">
-                <input type="checkbox" class="checkbox-select-main" id="checkbox-select-breast" name="radio-gender" />
-                <label for="checkbox-select-breast" class="checkbox-select-label-main">Грудь</label>
-            </div>
-            <div class="checkbox-select mb-8">
-                <input type="checkbox" class="checkbox-select-main" id="checkbox-select-back" name="radio-gender" />
-                <label for="checkbox-select-back" class="checkbox-select-label-main">Со спины</label>
-            </div>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Checkbox</title>
+	<link rel="stylesheet" href="css/nav.min.css" />
+</head>
 
-            <!-- Start: Checkbox switch blue -->
-            <div class="content-checkbox">
-                <input class="checkbox-input" type="checkbox" id="casting-switch-1" />
-                <label for="casting-switch-1">Toggle</label>
-            </div>
-            <!-- End: Checkbox switch blue -->
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <!-- <script src="js/inputs-form.js"></script> -->
-    </body>
+<body>
+	<div class="container">
+		@@include('header__menu.html')
+
+		<div class="checkbox-button mb-8">
+			<input type="radio" class="checkbox-main" id="spoiler-gender-male" name="radio-gender" />
+			<label for="spoiler-gender-male" class="label-main">Мужской</label>
+		</div>
+		<div class="checkbox-button mb-8">
+			<input type="radio" class="checkbox-main" id="spoiler-gender-female" name="radio-gender" />
+			<label for="spoiler-gender-female" class="label-main">Женский</label>
+		</div>
+		<div class="checkbox-select mb-8">
+			<input type="checkbox" class="checkbox-select-main" id="checkbox-select-breast" name="radio-gender" />
+			<label for="checkbox-select-breast" class="checkbox-select-label-main">Грудь</label>
+		</div>
+		<div class="checkbox-select mb-8">
+			<input type="checkbox" class="checkbox-select-main" id="checkbox-select-back" name="radio-gender" />
+			<label for="checkbox-select-back" class="checkbox-select-label-main">Со спины</label>
+		</div>
+
+		<!-- Start: Checkbox switch blue -->
+		<div class="content-checkbox">
+			<input class="checkbox-input" type="checkbox" id="casting-switch-1" />
+			<label for="casting-switch-1">Toggle</label>
+		</div>
+		<!-- End: Checkbox switch blue -->
+
+		<label class="checkbox-small-container --text-right">
+			<input type="checkbox" class="checkbox-small" />
+			<div class="checkmark"></div>
+		</label>
+
+		<!-- Start: Checkbox on click -->
+		<h2>Checkbox on click opacity</h2>
+		<form class="mb-24" action=" #" id="add-services">
+			<div class="change-order-services">
+				<div class="change-order-services-inner">
+					<input class="change-order-input" type="checkbox" name='bed' id="bed" />
+					<label class="change-order-services-item --bed" for="bed"></label>
+					<input class="change-order-input" type="checkbox" name='wash' id="wash" />
+					<label class="change-order-services-item --wash" for="wash"></label>
+					<input class="change-order-input" type="checkbox" name='chemical' id="chemical" />
+					<label class="change-order-services-item --chemical" for="chemical"></label>
+				</div>
+			</div>
+		</form>
+
+		<div class="accordion__content-box">
+			<form action="#">
+				<div class="accordion__content-btns">
+					<input class="accordion__content-input" type="checkbox" name='Buy' id="buyNow" />
+					<label class="accordion__content-btns-item mb-10" for="buyNow">Buy Now</label>
+					<input class="accordion__content-input" type="checkbox" name='Auction' id="auction" />
+					<label class="accordion__content-btns-item" for="auction">On Auction</label>
+					<input class="accordion__content-input" type="checkbox" name='New' id="new" />
+					<label class="accordion__content-btns-item" for="new">New</label>
+					<input class="accordion__content-input" type="checkbox" name='offers' id="offers" />
+					<label class="accordion__content-btns-item" for="offers">Has Offers</label>
+				</div>
+			</form>
+		</div>
+		<!-- End: Checkbox on click -->
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!-- <script src="js/inputs-form.js"></script> -->
+</body>
+
 </html>

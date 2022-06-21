@@ -26,17 +26,23 @@
 }
 
 /* Если нужен hover только на десктопе, на мобильных отключается ------------------------------------*/
-@media (hover: hover) {
-	&:hover {
+.parent {
+	transition: all 0.2s ease-out;
+
+	@media (hover: hover) {
+		&:hover {
+			border-radius: 4px;
+			background-color: #E0E0E0;
+		}
+	}
+
+	&:active {
 		border-radius: 4px;
 		background-color: #E0E0E0;
 	}
 }
 
-&:active {
-	border-radius: 4px;
-	background-color: #E0E0E0;
-}
+
 
 /* ------------------------------------------------------------------------------------------------ */
 

@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Select</title>
-		<link rel="stylesheet" href="css/nav.min.css" />
-	</head>
-	<body>
-		<div class="container">
-			@@include('header__menu.html')
 
-			<div class="select-wrapper">
-				<div class="selectField">
-					<p class="selectField-text">Нажмите, чтобы выбрать</p>
-					<img class="selectField-icon" src="arrow-topBottom.svg" />
-				</div>
-				<ul class="selectField-list">
-					<li class="selectField-options">
-						<p>Первый текст</p>
-					</li>
-					<li class="selectField-options">
-						<p>Второй текст</p>
-					</li>
-					<li class="selectField-options">
-						<p>Третий текст</p>
-					</li>
-					<li class="selectField-options">
-						<p>Четвертый текст</p>
-					</li>
-					<li class="selectField-options">
-						<p>Пятый текст</p>
-					</li>
-				</ul>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Select</title>
+	<link rel="stylesheet" href="css/nav.min.css" />
+</head>
+
+<body>
+	<div class="container">
+		@@include('header__menu.html')
+
+		<div class="select-wrapper">
+			<div class="selectField">
+				<p class="selectField-text">Нажмите, чтобы выбрать</p>
+				<img class="selectField-icon" src="arrow-topBottom.svg" />
+			</div>
+			<ul class="selectField-list">
+				<li class="selectField-options">
+					<p>Первый текст</p>
+				</li>
+				<li class="selectField-options">
+					<p>Второй текст</p>
+				</li>
+				<li class="selectField-options">
+					<p>Третий текст</p>
+				</li>
+				<li class="selectField-options">
+					<p>Четвертый текст</p>
+				</li>
+				<li class="selectField-options">
+					<p>Пятый текст</p>
+				</li>
+			</ul>
+		</div>
+		<div class="select-wrapper">
+			<div class="select-container">
+				<select class="select">
+					<option value="1">Ether (ETH)</option>
+					<option value="2">United States Dollar (USD)</option>
+				</select>
 			</div>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<script src="js/select.js"></script>
-	</body>
+
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/select.js"></script>
+</body>
+
 </html>

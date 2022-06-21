@@ -1,24 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Inputs-form</title>
-		<link rel="stylesheet" href="css/nav.min.css" />
-	</head>
-	<body>
-		<div class="container">
-			@@include('header__menu.html')
 
-			<div class="input-box mb-24">
-				<input type="number" />
-			</div>
-			<div class="area-field-wrapper">
-				<textarea class="area-field" name="text"></textarea>
-			</div>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Inputs-form</title>
+	<link rel="stylesheet" href="css/nav.min.css" />
+</head>
+
+<body>
+	<div class="container">
+		@@include('header__menu.html')
+
+		<div class="input-box mb-24">
+			<input type="number" />
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<script src="js/inputs-form.js"></script>
-	</body>
+		<div class="area-field-wrapper">
+			<textarea class="area-field" name="text"></textarea>
+		</div>
+
+		<input class="order-amount" style="margin-top: 16px;" type="number">
+
+		<!-- скрытые данные для отправки -->
+		<input type="hidden" name="star-1" value="1">
+
+		<!-- форма для связи с бэком -->
+		<form action="" method="POST" class="welcome-form" id="cleaningTools">
+			<input class="welcome-input" id="username" type="text" name="username" placeholder="Username" />
+			<input class="welcome-input" id="pwd" name="pwd" type="password" placeholder="Password" />
+		</form>
+
+		<form action="" method="POST" id="orderAmount">
+			<input id="amount" class="order-amount" type="number" name="amount">
+		</form>
+		<!-- если кнопка вне пределов формы -->
+		<button type="submit" form="cleaningTools" name="ready" class="main-btn" aria-label="start">i am ready</button>
+		<button class="main-btn" name="came" aria-label="start">i came</button>
+		<button class="secondary-btn" name="operator" aria-label="decline">help operator</button>
+		<button class="main-btn" name="next" aria-label="next">next</button>
+		<button class="main-btn --double" name="match" aria-label="match">cleaning time <br> match</button>
+		<button class="secondary-btn" name="mismatch" aria-label="mismatch">cleaning time <br> mismatch</button>
+		<button class="secondary-btn" name="skip-step" aria-label="skip">skip step</button>
+		<button class="main-btn" name="start" aria-label="start cleaning">start cleaning</button>
+		<button class="main-btn" name="finish" aria-label="finish cleaning">finish cleaning</button>
+		<button class="main-btn" name="finish-order" aria-label="finish-order">finish order</button>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/inputs-form.js"></script>
+</body>
+
 </html>

@@ -402,7 +402,15 @@
 	// Start: двойное меню с переключением
 	$(function () {
 		$('ul.profile-menu-wrapper').on('click', 'li:not(.active)', function () {
-			$(this).addClass('active').siblings().removeClass('active').closest('div.profile-menu__tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+			$(this)
+				.addClass('active')
+				.siblings()
+				.removeClass('active')
+				.closest('div.profile-menu__tabs')
+				.find('div.tabs__content')
+				.removeClass('active')
+				.eq($(this).index())
+				.addClass('active');
 		});
 	});
 	// End: двойное меню с переключением
@@ -865,4 +873,19 @@
 	// End: Plans-switch
 })(jQuery);
 
+const select = document.querySelectorAll('.select');
 
+select.forEach((item) => {
+	item.addEventListener('change', backgrounds);
+
+	function backgrounds() {
+		let choice = item.value;
+
+		if (choice === '1') {
+			item.style.backgroundImage = "url('../images/eth-icon.svg')";
+		}
+		if (choice === '2') {
+			item.style.backgroundImage = "url('../images/dollar-icon.svg')";
+		}
+	}
+});

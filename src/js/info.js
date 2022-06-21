@@ -72,3 +72,9 @@ document.querySelectorAll('p').forEach((p) => {
 	else p.setAttribute('align', 'left');
 });
 // ------------------------------------------------------------------------------------------------------------------------->
+
+elem.getElementById('hours1').checked = true;
+
+for (let elem of input) {
+	console.log(elem);
+}
