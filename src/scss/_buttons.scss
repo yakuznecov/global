@@ -17,11 +17,13 @@
 		background: #1991eb;
 		border: 2px solid #7bb9f0;
 	}
+
 	&:hover,
 	&:active {
 		background: #127fd1;
 	}
 }
+
 // End: Кнопка с синей заливкой
 
 .blue-btn {
@@ -36,27 +38,33 @@
 	color: #fff;
 	background: #1991eb;
 	transition: 0.2s ease;
+
 	&.--inactive {
 		background: #c6e4fa;
+
 		&:hover,
 		&:active {
 			background: #c6e4fa;
 		}
 	}
+
 	&.--medium {
 		height: 32px;
 		font-size: 15px;
 		letter-spacing: 0.5px;
 	}
+
 	&.--large {
 		height: 40px;
 		font-size: 16px;
 		letter-spacing: 0.5px;
 	}
+
 	&:hover,
 	&:active {
 		background: #127fd1;
 	}
+
 	&:focus-visible {
 		background: #1991eb;
 		border: 2px solid #7bb9f0;
@@ -92,6 +100,7 @@
 	&.--transparent {
 		color: #8796a2;
 		background: transparent;
+
 		&:hover {
 			@media (min-width: 897px) {
 				color: #607d8b;
@@ -99,6 +108,7 @@
 				background: #fafafa;
 			}
 		}
+
 		&:active {
 			color: #607d8b;
 			border: 1px solid #90a4ae;
@@ -109,6 +119,7 @@
 	&.--inactive {
 		color: #e0e0e0;
 		cursor: auto;
+
 		&:hover,
 		&:active {
 			background: transparent;
@@ -123,6 +134,7 @@
 		background: transparent;
 	}
 }
+
 // End: прозрачная кнопка без заливки
 
 // Start: Наведение на иконки приложений
@@ -165,6 +177,7 @@
 .googlePlay:hover .googlePlay-first {
 	opacity: 1;
 }
+
 // End: Наведение на иконки приложений
 
 // Start: Кнопки закрытия
@@ -179,10 +192,12 @@
 	border-radius: 4px;
 	background: transparent;
 	transition: all 0.2s;
+
 	&:focus-visible {
 		border: 2px solid #7bb9f0;
 		background: #f4f6f6;
 	}
+
 	&:hover,
 	&:active {
 		background: #e0e0e0;
@@ -194,23 +209,24 @@
 		}
 	}
 }
+
 // End: Кнопки закрытия
 
 .card-large-btn {
-    display: inline-flex;
-    justify-content: space-between;
-    height: 24px;
-    min-width: 105px;
-    font-size: 13px;
-    line-height: 22px;
-    margin-bottom: 2px;
-    padding: 0 11px;
-    border-radius: 4px;
-    letter-spacing: .4px;
-    color: #fff;
-    border: 2px solid transparent;
-    background: #1991eb;
-    transition: all .2s ease;
+	display: inline-flex;
+	justify-content: space-between;
+	height: 24px;
+	min-width: 105px;
+	font-size: 13px;
+	line-height: 22px;
+	margin-bottom: 2px;
+	padding: 0 11px;
+	border-radius: 4px;
+	letter-spacing: .4px;
+	color: #fff;
+	border: 2px solid transparent;
+	background: #1991eb;
+	transition: all .2s ease;
 
 	&:hover {
 		background: #127fd1;
@@ -233,5 +249,30 @@
 	&:hover {
 		background: #a0cfff;
 		color: #127fd1;
+	}
+}
+
+.cast__join-btn {
+	display: inline-block;
+	padding: 12px 0;
+	width: 200px;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 700;
+	background: linear-gradient(180deg, #208AE8 0%, #1681E0 100%);
+	border-radius: 4px;
+	transition: hover 0.2s;
+
+	@media (hover: hover) {
+		&:hover {
+			background: linear-gradient(180deg, #1679D1 0%, #1371C4 100%);
+			color: #fff;
+		}
+	}
+
+	&:active {
+		background: linear-gradient(180deg, #1679D1 0%, #1371C4 100%);
+		color: #fff;
 	}
 }

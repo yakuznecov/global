@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Motion</title>
+</head>
+
+<body>
+	<motion.div animate={{ rotate: 360 }} transition={{ duration: 2, repeat: Infinity, repeatDelay: 1, repeatType: 'rewerse' , type: }}>
+
+	</motion.div>
+
+	<!-- animate={{ rotate: 360 }} Поворот -->
+	<!-- transition={{ duration: 2 }} Длительность анимации -->
+	<!-- transition={{ repeat: Infinity }} Повтор анимации -->
+	<!-- transition={{ delay: 1 }} Задержка анимации через 3 сек -->
+	<!-- transition={{ repeatDelay: 1 }} Повторная задержка анимации -->
+	<!-- transition={{ repeatType: 'rewerse' }} Вращение в обратную сторону -->
+	<!-- transition={{ type: 'just' }} 5 типов анимации можно выбрать -->
+	<!-- transition={{ ease: 'easeInOut' }} еще один тип анимации -->
+
+	<!-- initial={{ x: -1000, opacity: 0 }} изначальное смещение элемента на 1000px -->
+	<!-- animate={{ x: 0, opacity: 1 }} При анимации элемент выезжает на 0 и меняется прозрачность -->
+	<!-- initial={'hidden'} animate={'visible'} variants={Variants}  Передача значений из внешнего места -->
+
+	<!-- whileHover={{scale: 1.3, color: 'white'}} На hover -->
+
+	<!-- exit={{height: 0, opacity: 0}} На исчезновение элемента -->
+	<!-- style={{overflow: hidden}} Стиль -->
+</body>
+<script>
+	const Variants = {
+		hidden: {
+			x: -1000,
+			opacity: 0,
+		},
+		visible: {
+			x: 0,
+			opacity: 1,
+		},
+	};
+</script>
+
+</html>

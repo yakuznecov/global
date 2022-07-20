@@ -1,0 +1,54 @@
+// контейнер аватара
+.avatar-box {
+	min-width: 96px;
+	height: 96px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+// для картинки аватара
+.avatar__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.avatar__card-img {
+	border-radius: 4px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// Запретить сжатие контейнера flex c картинкой внутри
+.img_box {
+	flex: 0 0 auto;
+	width: 32px;
+	height: 32px;
+}
+
+// For projects
+
+.inside-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.image-box {
+	width: 100%;
+	height: 442px;
+	overflow: hidden;
+	cursor: pointer;
+
+	img {
+		transition: filter .2s linear, transform .2s linear;
+
+		&:hover {
+			filter: brightness(90%);
+			transform: scale(1.02);
+			will-change: transform;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+.header-menu-link {
+	font-size: 14px;
+	color: #000;
+	transition: all 0.2s;
+
+	@media (hover: hover) {
+		&:hover {
+			color: #aaa;
+		}
+	}
+
+	&:active {
+		color: #aaa;
+	}
+}

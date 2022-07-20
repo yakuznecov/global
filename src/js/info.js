@@ -21,13 +21,29 @@ window.scrollTo(pageX, pageY); // Прокручивает страницу до
 elem.scrollIntoView(true); // Элемент при прокрутке будет вверху браузера. Если false в скобках, то элемент будет внизу окна браузера
 document.body.style.overflow = 'hidden'; // скрывает скролл у страницы
 document.body.style.overflow = ''; // показывает скролл у страницы
+document.documentElement.style.setProperty('--color-primary', 'orangered'); // изменение цвета переменной css, определенной в стилях в :root
 elem.getBoundingClientRect(); // полные координаты объекта
 let x = document.elementFromPoint(x, y); // что находится в данной позиции на странице
+getComputedStyle(message).color; // получить цвет, который записан в стилях message
+message.style.height = Number.parseFloat(getComputedStyle(message).height, 10) + 40 + 'px'; // увеличить высоту элемента на 40px
+
+el.closest('.header') // выбирает ближайший родительский элемент
+el.nextElementSibling // следующий элемент на одном уровне
 
 // ------------------------------------------------------------------------------------------------------------------------->
 
 // Позволяет избежать ошибки null на других страницах сайта ---------------------------------------------------------------->
 nextBtn && nextBtn.addEventListener('click', function () {});
+
+window.addEventListener('scroll', function () {
+	if (window.scrollY > 5) {
+		shopFilterWrapper && shopFilterWrapper.classList.add('maxHeight');
+	} else {
+		shopFilterWrapper && shopFilterWrapper.classList.remove('maxHeight');
+	}
+});
+
+this.control = this.accordion?.querySelector('.accordion__control'); // либо оператор ? опциональной последовательности
 // ------------------------------------------------------------------------------------------------------------------------->
 
 // Убирает overflow при клике и добавляет обратно при клике на кнопку закрыть ----------------------------------------------->
@@ -35,11 +51,11 @@ const massActors = document.querySelector('.dropdown-text-js');
 const transferActorsCloseBtn = document.querySelector('.transfer-actors-close-btn');
 
 massActors.addEventListener('click', function () {
-    mainItemsWrapper.style.overflow = 'inherit';
+	mainItemsWrapper.style.overflow = 'inherit';
 });
 
 transferActorsCloseBtn.addEventListener('click', function () {
-    mainItemsWrapper.style.overflow = 'overlay';
+	mainItemsWrapper.style.overflow = 'overlay';
 });
 
 // ------------------------------------------------------------------------------------------------------------------------>
@@ -50,18 +66,18 @@ inputTopSearch.placeholder = 'Актёры';
 
 // Установить 3 точки в конце обрезанного текста --------------------------------------------------------------------------->
 const cutTextString = () => {
-    let cutText = document.querySelector('.js-cutText');
-    let text = cutText.innerHTML;
+	let cutText = document.querySelector('.js-cutText');
+	let text = cutText.innerHTML;
 
-    function truncateString(str, n) {
-        if (str.length > n) {
-            return str.substring(0, n) + ' ...';
-        } else {
-            return str;
-        }
-    }
+	function truncateString(str, n) {
+		if (str.length > n) {
+			return str.substring(0, n) + ' ...';
+		} else {
+			return str;
+		}
+	}
 
-    cutText.innerHTML = truncateString(text, 14);
+	cutText.innerHTML = truncateString(text, 14);
 };
 
 cutTextString();
@@ -78,3 +94,11 @@ elem.getElementById('hours1').checked = true;
 for (let elem of input) {
 	console.log(elem);
 }
+
+// Плавная прокрутка до элемента, современный способ
+const btnScrollTo = document.querySelector('.btn');
+const section = document.querySelector('.section');
+
+btnScrollTo.addEventListener('click', function () {
+	section.scrollIntoView({ behavior: 'smooth' });
+});

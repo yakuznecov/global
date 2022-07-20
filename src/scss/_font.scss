@@ -13,3 +13,88 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+// font-family: 'Titillium Web', sans-serif;
+
+
+span {
+	font-size: 13px;
+	line-height: 13px;
+	color: #8C8C8C;
+}
+
+span {
+	font-size: 14px;
+	line-height: 14px;
+	color: #797A79;
+
+	&::placeholder {
+		font-size: 12px;
+		line-height: 12px;
+		color: #afafaf;
+
+		// color: #797A79;
+		// opacity: 0.6;
+	}
+}
+
+span {
+	font-size: 14px;
+	line-height: 14px;
+	color: #000;
+}
+
+.name {
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 700;
+	color: #666666;
+}
+
+.subtitle {
+	font-size: 14px;
+	line-height: 14px;
+	color: #787878;
+}
+
+.profile__info-item-title {
+	font-size: 16px;
+	line-height: 16px;
+	color: #808080;
+}
+
+span {
+	font-size: 20px;
+	line-height: 20px;
+	color: #000;
+}
+
+span {
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 500;
+	color: #000;
+	font-family: 'Podkova', serif;
+}
+
+span {
+	font-size: 24px;
+	line-height: 24px;
+	color: #000;
+	font-family: 'Podkova', serif;
+}
+
+.card__main-content-top-title {
+	font-size: 32px;
+	line-height: 32px;
+	color: #000;
+	font-family: 'Podkova', serif;
+}
+
+.modal-card-pay-title {
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #000;
+}

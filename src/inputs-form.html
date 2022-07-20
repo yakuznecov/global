@@ -16,10 +16,29 @@
 		<div class="input-box mb-24">
 			<input type="number" />
 		</div>
-		<div class="area-field-wrapper">
-			<textarea class="area-field" name="text"></textarea>
+
+		<!-- search-box -->
+		<div class="search-box mb-24">
+			<img src="search-icon.svg" alt="icon">
+			<input type="text" placeholder="Search...">
 		</div>
 
+		<!-- Start: input с иконкой -->
+		<div class="input-box-with-icon">
+			<span class="input-box-icon">
+				<img src="ethlogo14.svg" alt="icon">
+			</span>
+			<input class="input-box-input" type="text">
+		</div>
+		<!-- End: input с иконкой -->
+
+		<!-- Start: textarea -->
+		<div class="area-field-wrapper mb-24">
+			<textarea class="area-field" name="text"></textarea>
+		</div>
+		<h2>class="area-field2"</h2>
+		<textarea class="area-field2" type="text" name="text" id="question"></textarea>
+		<!-- End: textarea -->
 		<input class="order-amount" style="margin-top: 16px;" type="number">
 
 		<!-- скрытые данные для отправки -->
@@ -31,7 +50,7 @@
 			<input class="welcome-input" id="pwd" name="pwd" type="password" placeholder="Password" />
 		</form>
 
-		<form action="" method="POST" id="orderAmount">
+		<form action="" method="POST" id="orderAmount" enctype="multipart/form-data">
 			<input id="amount" class="order-amount" type="number" name="amount">
 		</form>
 		<!-- если кнопка вне пределов формы -->

@@ -38,29 +38,6 @@
 	background: #3FF810;
 }
 
-// контейнер аватара
-.avatar-box {
-	width: 96px;
-	height: 96px;
-	border-radius: 50%;
-	cursor: pointer;
-}
-
-// для картинки аватара
-.avatar__img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 50%;
-}
-
-.avatar__card-img {
-	border-radius: 4px;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
 // arrow down
 .parent {
 	& .teamwork__dropdown-input-modal-arrow path {
@@ -206,3 +183,64 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+&.--first-movie {
+	width: 519px;
+	height: 738px;
+	background-image: url(../public/images/ru/cast-power-movie-1.svg);
+}
+
+.dark .modal-close svg path {
+	fill: #fff;
+	fill-opacity: 1;
+}
+
+.dark .header svg path {
+	fill: #fff;
+}
+
+.dark .header svg rect {
+	fill: #fff;
+}
+
+.dark .accordion__icon svg path {
+	stroke: #fff;
+}
+
+.dark .header svg circle {
+	stroke: #fff;
+}
+
+.dark .header span {
+	color: #fff;
+}
+
+.dark .header__search-input {
+	border: 2px solid #fff;
+	color: #999;
+}
+
+.dark .search-icon-dark {
+	display: flex;
+}
+
+.dark .account-icon path {
+	fill: #fff;
+}
+
+.dark .header__content {
+	color: #fff;
+}
+
+.dark .create__header-title {
+	color: #999;
+}
+
+.bg {
+	background-size: contain;
+}
+
+// js-open-modal
+// data-modal="create-category"
+
+// <img src="/portal/images/ru/actors-32.png" alt="actors" />
